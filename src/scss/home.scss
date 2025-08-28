@@ -1,3 +1,80 @@
 //====================================================================================================
+// Hero
+.hero {
+    // .hero__container
+    &__container {
+    }
+    // .hero__wrapper
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        @include adaptiveValue("padding-top", 130, 50);
+        @include adaptiveValue("padding-bottom", 130, 50);
+        @include adaptiveValue("padding-left", 170, 22);
+        @include adaptiveValue("padding-right", 170, 22);
+        border-radius: toRem(22);
+        background: linear-gradient(279deg, #cdcdff 7.69%, #eef2ff 101%);
+        box-shadow:
+            0 2.044px 6.131px 0 rgba(0, 0, 0, 0.1),
+            0 11.752px 15.328px 0 rgba(171, 236, 214, 0.2);
+    }
+    // .hero__subtitle
+    &__subtitle {
+        display: flex;
+        align-items: center;
+        gap: toRem(5);
+        display: flex;
+        padding: toRem(14) toRem(31);
+        color: #4b4aef;
+        @include adaptiveValue("font-size", 16, 10);
+        line-height: toRem(24);
+        border-radius: toRem(74);
+        border: 1px solid #4b4aef;
+        background: rgba(75, 74, 239, 0.07);
+    }
+    // .hero__title
+    &__title {
+        color: #00173a;
+        @include adaptiveValue("font-size", 48, 25);
+        font-size: var(--font-size-48, 48px);
+        font-weight: 800;
+        @include adaptiveValue("line-height", 62, 37);
+        margin-top: toRem(13);
+        span {
+            color: #4b4aef;
+        }
+    }
+    // .hero__desc
+    &__desc {
+        color: #00173a;
+        @include adaptiveValue("font-size", 20, 16);
+        line-height: toRem(36);
+        margin-top: toRem(24);
+    }
+    // .hero__btn
+    &__btn {
+        border-radius: toRem(10);
+        background: #ffca1d;
+        padding: toRem(14);
+        width: toRem(520);
+        margin-top: toRem(31);
+        color: #00173a;
+        font-size: toRem(15);
+        font-weight: 600;
+        line-height: toRem(22);
+        transition: 0.3s ease;
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                background: #eeb700;
+            }
+        }
+    }
+}
 
 //====================================================================================================

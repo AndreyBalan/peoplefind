@@ -1,1 +1,21 @@
 // Заголовки, загальні БЕМ блоки та інше...
+.btn {
+    border-radius: toRem(10);
+    background: #ffca1d;
+    padding: toRem(14);
+    width: toRem(520);
+    margin-top: toRem(31);
+    color: #00173a;
+    font-size: toRem(15);
+    font-weight: 600;
+    line-height: toRem(22);
+    transition: 0.3s ease;
+    @media (max-width: $tablet) {
+        width: 100%;
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            background: #eeb700;
+        }
+    }
+}
