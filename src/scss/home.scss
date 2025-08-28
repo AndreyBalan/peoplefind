@@ -211,5 +211,84 @@
         line-height: toRem(24); /* 150% */
     }
 }
+//========================================================================================================================================================
+// Benefits
+.benefits {
+    // .benefits__container
+    &__container {
+    }
+    // .benefits__wrapper
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        column-gap: toRem(18);
+        padding: toRem(80) toRem(85);
+        border-radius: toRem(22);
+        border: 1px solid #dcdce2;
+        background: #f8f8f8;
+        @media (max-width: $tablet) {
+            flex-wrap: wrap;
+            row-gap: toRem(30);
+            justify-content: center;
+        }
+        @media (max-width: $mobile) {
+            row-gap: toRem(20);
+            padding: toRem(50) toRem(20);
+        }
+    }
+    // .benefits__content
+    &__content {
+        max-width: toRem(516);
+        @media (max-width: $mobile) {
+            max-width: 100%;
+        }
+    }
+    // .benefits__title
+    &__title {
+        text-align: left;
+    }
+    // .benefits__descr
+    &__desc {
+        text-align: left;
+    }
+    // .benefits__btn
+    &__btn {
+        @media (max-width: $tablet) {
+            display: block;
+            margin: 0 auto;
+            margin-top: toRem(40);
+        }
+    }
+    // .benefits__items
+    &__items {
+        display: flex;
+        gap: toRem(77);
+        @media (max-width: $tablet) {
+            margin-top: toRem(30);
+            justify-content: space-between;
+        }
+        @media (max-width: $mobile) {
+            justify-content: center;
+            row-gap: toRem(20);
+            gap: toRem(27);
+            flex-wrap: wrap;
+        }
+    }
+    // .benefits__item
+    &__item {
+        text-align: center;
+    }
+    // .benefits__subtitle
+    &__subtitle {
+        color: #4b5563;
+        @include adaptiveValue("font-size", 25, 18);
+        font-weight: 700;
+        line-height: toRem(48); /* 192% */
+        margin-top: toRem(10);
+    }
+}
+
+.btn {
+}
 
 //========================================================================================================================================================
