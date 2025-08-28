@@ -387,3 +387,47 @@
     }
 }
 //========================================================================================================================================================
+// cta
+.cta {
+    // .cta__container
+    &__container {
+    }
+    // .cta__wrapper
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: toRem(88) toRem(80);
+        background-image: url("@img/cta.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        border-radius: toRem(22);
+        @media (max-width: $tablet) {
+            background-image: url("@img/cta-tab.jpg");
+        }
+        @media (max-width: $mobile) {
+            padding: toRem(55) toRem(20);
+            background-image: url("@img/cta-mob.jpg");
+        }
+    }
+    // .cta__title
+    &__title {
+        color: #00173a;
+        @include adaptiveValue("font-size", 56, 20);
+        font-weight: 700;
+        line-height: toRem(84); /* 150% */
+    }
+    // .cta__desc
+    &__desc {
+        color: #00173a;
+        max-width: toRem(426);
+        line-height: toRem(24); /* 150% */
+    }
+    // .cta__btn
+    &__btn {
+    }
+}
+
+//========================================================================================================================================================
