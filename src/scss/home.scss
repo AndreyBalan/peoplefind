@@ -287,8 +287,103 @@
         margin-top: toRem(10);
     }
 }
-
-.btn {
+//========================================================================================================================================================
+// About
+.about {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: toRem(260);
+        right: toRem(-200);
+        width: toRem(385);
+        height: toRem(385);
+        border-radius: 100%;
+        z-index: -1;
+        background-color: rgba(131, 130, 243, 0.18);
+        @media (max-width: $tablet) {
+            right: toRem(-250);
+            top: toRem(60);
+        }
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+    // .about__container
+    &__container {
+    }
+    // .about__wrapper
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        gap: toRem(30);
+        @media (max-width: $tablet) {
+            flex-wrap: wrap;
+        }
+        @media (max-width: $mobile) {
+            gap: toRem(23);
+        }
+    }
+    // .about__img
+    &__img {
+        position: relative;
+        @media (max-width: $tablet) {
+            order: 1;
+            width: 100%;
+            min-height: toRem(340);
+            img {
+                max-width: toRem(420);
+                position: absolute;
+                top: toRem(-100);
+                right: toRem(50);
+            }
+        }
+        @media (max-width: $mobile) {
+            img {
+                position: relative;
+                top: 0;
+                right: 0;
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            left: toRem(160);
+            bottom: toRem(-30);
+            width: toRem(78);
+            height: toRem(78);
+            border-radius: 100%;
+            background-color: #e9e8fd;
+            @media (max-width: $tablet) {
+                bottom: toRem(220);
+                z-index: -1;
+                left: toRem(150);
+            }
+            @media (max-width: $mobile) {
+                display: none;
+            }
+        }
+    }
+    // .about__content
+    &__content {
+        @media (max-width: $tablet) {
+            max-width: toRem(596);
+        }
+    }
+    // .about__title
+    &__title {
+        text-align: left;
+    }
+    // .about__desc
+    &__desc {
+        text-align: left;
+    }
+    // .about__btn
+    &__btn {
+        width: auto;
+        padding: toRem(10) toRem(63);
+    }
 }
-
 //========================================================================================================================================================
