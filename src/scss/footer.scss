@@ -1,3 +1,96 @@
 //====================================================================================================
+.footer {
+    padding: toRem(40) toRem(0);
+    background-color: #f8f8f8;
+    // .footer__container
+    &__container {
+    }
+    // .footer__top
+    &__top {
+        height: toRem(74);
+        @include adaptiveValue("padding-left", 40, 30);
+        @include adaptiveValue("padding-right", 40, 30);
+        @media (max-width: $tablet) {
+            height: auto;
+        }
+    }
+    // .footer__wrapper
+    &__wrapper-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
+    }
+    &__wrapper-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: toRem(16);
+        @media (max-width: $mobile) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    &__logo {
+        // @media (max-width: $tablet) {
+        //     width: 100%;
+        // }
+    }
+    // .footer__nav
+    &__nav-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include adaptiveValue("gap", 48, 24);
+        @media (max-width: $tablet) {
+            margin-top: toRem(32);
+        }
+        @media (max-width: $mobile) {
+            flex-wrap: wrap;
+        }
+    }
+    &__nav-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include adaptiveValue("gap", 48, 24);
+    }
+    // .footer__link
+    &__link {
+        color: #00173a;
+        font-size: toRem(16);
+        font-style: normal;
+        line-height: toRem(24); /* 150% */
+        a {
+            @media (any-hover: hover) {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    // .footer__bottom
+    &__bottom {
+        margin-top: toRem(24);
+        padding-left: toRem(40);
+        padding-right: toRem(30);
+        @media (max-width: $tablet) {
+            padding-right: toRem(0);
+            padding-left: toRem(0);
+        }
+
+        // @include adaptiveValue("padding-left", 40, 30);
+        // @include adaptiveValue("padding-right", 40, 30);
+    }
+    // .footer__copy
+    &__copy {
+        color: #00173a;
+        @media (max-width: $mobile) {
+            order: 1;
+        }
+    }
+}
 
 //====================================================================================================
