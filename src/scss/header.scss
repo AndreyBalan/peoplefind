@@ -13,6 +13,7 @@
     }
     // .header__logo
     &__logo {
+        z-index: 3;
     }
     // .header__menu
     &__menu {
@@ -21,6 +22,10 @@
 .menu {
     // .menu__body
     &__body {
+        @media (max-width: $tablet) {
+            background: #fff;
+            z-index: 2;
+        }
     }
     // .menu__list
     &__list {
