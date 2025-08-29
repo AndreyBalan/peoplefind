@@ -1,4 +1,35 @@
 // Заголовки, загальні БЕМ блоки та інше...
+.page.mob-decor {
+    position: relative;
+    @media (max-width: $mobile) {
+        &::before {
+            content: "";
+            position: absolute;
+            top: toRem(-140);
+            right: toRem(100);
+            width: toRem(64);
+            height: toRem(64);
+            border-radius: 100%;
+            z-index: -1;
+            background-color: rgba(131, 130, 243, 0.18);
+
+            @media (max-width: $mobile) {
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: toRem(-110);
+            right: toRem(-30);
+            width: toRem(110);
+            height: toRem(110);
+            border-radius: 100%;
+            z-index: -1;
+            background-color: #afafff;
+        }
+    }
+}
+
 section {
     @include adaptiveValue("padding-top", 80, 40);
     @include adaptiveValue("padding-bottom", 80, 40);
