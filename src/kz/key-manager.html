@@ -1,27 +1,59 @@
 <!doctype html>
 <html lang="en">
-    @@include('html/_head.htm',{ "title":"People Find - Contact" })
+    @@include('html/_head.htm',{ "title":"People Find - Key Account manager" })
     <body>
         <div class="wrapper">
             @@include('html/_header.htm',{})
             <main class="page mob-decor">
-                <section class="contact">
-                    <div class="contact__container">
-                        <div class="contact__wrapper">
-                            <div class="contact__content">
-                                <h2 class="contact__title section__title">Contact us</h2>
-                                <p class="contact__desc section__desc">
-                                    Want to use our outstanding services to boost your career? Get
-                                    in touch through the contact details on this page, and we’ll
-                                    reply without delay!
-                                </p>
-                                <ul class="contact__list">
-                                    <li class="contact__list-item">+995571109605</li>
-                                    <li class="contact__list-item">office@work-point.pro</li>
-                                    <li class="contact__list-item">
-                                        Almaty Business Center "Cascade" Ave. Seifullina 420
-                                    </li>
-                                </ul>
+                <section class="contact vacancy">
+                    <div class="vacancy__container">
+                        <div class="contact__wrapper vacancy__wrapper">
+                            <div>
+                                <div class="vacancy__content">
+                                    <h2 class="vacancy__title">
+                                        <span class="yellow">Key Account manager</span>
+                                    </h2>
+                                    <h3 class="vacancy__subtitle">Responsibilities:</h3>
+
+                                    <ul class="vacancy__list vacancy__list_orange">
+                                        <li class="vacancy__list-item">
+                                            Developing a schedule for assessing training needs.
+                                        </li>
+                                        <li class="vacancy__list-item">
+                                            Conducting systematic training sessions for employees.
+                                        </li>
+                                        <li class="vacancy__list-item">
+                                            Collaborating with fellow trainers and management to
+                                            address any new developments impacting the company.
+                                        </li>
+                                        <li class="vacancy__list-item">
+                                            Crafting training materials grounded in factual
+                                            research.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="vacancy__content mt-20">
+                                    <h3 class="vacancy__subtitle">Candidate / Profile Skills:</h3>
+
+                                    <ul class="vacancy__list vacancy__list_orange">
+                                        <li class="vacancy__list-item">
+                                            12 months – 2 years of prior experience (preferably in
+                                            Training, but not mandatory).
+                                        </li>
+                                        <li class="vacancy__list-item">
+                                            Effective communication skills.
+                                        </li>
+                                        <li class="vacancy__list-item">
+                                            Strong organizational abilities.
+                                        </li>
+                                        <li class="vacancy__list-item">
+                                            Proficient in Advanced Research Skills.
+                                        </li>
+                                        <li class="vacancy__list-item">
+                                            Enthusiasm for learning is a valued quality.
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                             <form
                                 class="contact__form"
@@ -44,6 +76,8 @@
                                             type="text"
                                             id="surname"
                                             name="surname"
+                                            data-error="Incorrect name"
+                                            data-required
                                             placeholder="Surname " />
                                     </div>
                                 </div>
@@ -122,6 +156,7 @@
             </main>
             @@include('html/_footer.htm',{})
         </div>
-        @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+        <!-- @@include('html/_popup.htm',{})  -->
+        @@include('html/_js.htm',{})
     </body>
 </html>

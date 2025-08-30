@@ -44,6 +44,8 @@
                                             type="text"
                                             id="surname"
                                             name="surname"
+                                            data-error="Incorrect name"
+                                            data-required
                                             placeholder="Surname " />
                                     </div>
                                 </div>
@@ -76,7 +78,7 @@
                                 <div>
                                     <span class="upload__subtitle">Attach relevant files:</span>
                                 </div>
-
+                                <!-- кастомний інпут файлу -->
                                 <div class="form__file">
                                     <label for="file-upload" class="file-label">
                                         <img src="@img/upload.svg" alt="upload" /> Upload file
@@ -122,6 +124,7 @@
             </main>
             @@include('html/_footer.htm',{})
         </div>
-        @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+        <!-- @@include('html/_popup.htm',{})  -->
+        @@include('html/_js.htm',{})
     </body>
 </html>

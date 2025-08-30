@@ -228,5 +228,26 @@ section {
         background-color: rgba(131, 130, 243, 0.24);
 
         background: rgba(131, 130, 243, 0.24);
+        @media (max-width: $tablet) {
+            display: none;
+        }
     }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.form__error {
+    position: absolute;
+    font-size: toRem(12);
+    color: red;
 }

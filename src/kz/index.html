@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-    @@include('html/_head.htm',{ "title":"People Find - HR Agency" })
+    @@include('html/_head.htm',{ "title":"People Find - KZ" })
     <body>
         <div class="wrapper">
             @@include('html/_header.htm',{})
@@ -20,7 +20,7 @@
                                 Our services are tailored to different timeframes, depending on what
                                 each company requires.
                             </p>
-                            <a href="contact.html" class="hero__btn btn">Get in touch</a>
+                            <a href="#" class="hero__btn btn">Get in touch</a>
                         </div>
                     </div>
                 </section>
@@ -32,7 +32,7 @@
                         <p class="services__desc section__desc">
                             Navigate the possibilities with our range of services.
                         </p>
-                        <a href="services.html" class="services__btn btn">Services</a>
+                        <a href="#" class="services__btn btn">Services</a>
                         <div class="services__wrapper">
                             <div class="services__item">
                                 <div class="services__item-img">
@@ -40,7 +40,7 @@
                                 </div>
                                 <div>
                                     <h3 class="services__item-title">Executive recruitment</h3>
-                                    <a href="recruitment.html" class="services__item-link"
+                                    <a href="#" class="services__item-link"
                                         >Learn more <img src="@img/arrow-right.svg" alt="right"
                                     /></a>
                                 </div>
@@ -51,7 +51,7 @@
                                 </div>
                                 <div>
                                     <h3 class="services__item-title">Human Resources</h3>
-                                    <a href="resources.html" class="services__item-link"
+                                    <a href="#" class="services__item-link"
                                         >Learn more <img src="@img/arrow-right.svg" alt="right"
                                     /></a>
                                 </div>
@@ -62,7 +62,7 @@
                                 </div>
                                 <div>
                                     <h3 class="services__item-title">Training</h3>
-                                    <a href="training.html" class="services__item-link"
+                                    <a href="#" class="services__item-link"
                                         >Learn more <img src="@img/arrow-right.svg" alt="right"
                                     /></a>
                                 </div>
@@ -73,7 +73,7 @@
                                 </div>
                                 <div>
                                     <h3 class="services__item-title">Management Consulting</h3>
-                                    <a href="consulting.html" class="services__item-link"
+                                    <a href="#" class="services__item-link"
                                         >Learn more <img src="@img/arrow-right.svg" alt="right"
                                     /></a>
                                 </div>
@@ -94,7 +94,7 @@
                                     organizations of all sizes — from startups to major enterprises
                                     — in achieving consistent profitability.
                                 </p>
-                                <a href="clients.html" class="benefits__btn btn">Learn more</a>
+                                <a href="#" class="benefits__btn btn">Learn more</a>
                             </div>
                             <div class="benefits__items" data-da=".benefits__content, 991, 2">
                                 <div class="benefits__item">
@@ -127,7 +127,7 @@
                                     Our services are tailored to different timeframes, depending on
                                     what each company requires.
                                 </p>
-                                <a href="about.html" class="about__btn btn">Discover</a>
+                                <a href="#" class="about__btn btn">Discover</a>
                             </div>
                         </div>
                     </div>
@@ -140,7 +140,7 @@
                                 Find your place in a dynamic environment that values creativity and
                                 ambition.
                             </p>
-                            <a href="careers.html" class="cta__btn btn">Open Positions</a>
+                            <a href="#" class="cta__btn btn">Open Positions</a>
                         </div>
                     </div>
                 </section>
@@ -183,6 +183,8 @@
                                             type="text"
                                             id="surname"
                                             name="surname"
+                                            data-error="Incorrect name"
+                                            data-required
                                             placeholder="Surname " />
                                     </div>
                                 </div>
@@ -215,7 +217,7 @@
                                 <div>
                                     <span class="upload__subtitle">Attach relevant files:</span>
                                 </div>
-
+                                <!-- кастомний інпут файлу -->
                                 <div class="form__file">
                                     <label for="file-upload" class="file-label">
                                         <img src="@img/upload.svg" alt="upload" /> Upload file
@@ -261,6 +263,7 @@
             </main>
             @@include('html/_footer.htm',{})
         </div>
-        @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+        <!-- @@include('html/_popup.htm',{})  -->
+        @@include('html/_js.htm',{})
     </body>
 </html>
