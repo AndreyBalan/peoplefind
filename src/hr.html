@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+    @@include('html/_head.htm',{ "title":"People Find - HR Recruiter" })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.htm',{})
+            <main class="page mob-decor">
+                <section class="contact vacancy">
+                    <div class="vacancy__container">
+                        <div class="contact__wrapper vacancy__wrapper">
+                            <div>
+                                <div class="vacancy__content">
+                                    <h2 class="vacancy__title">
+                                        <span class="purple">HR Recruiter</span>
+                                    </h2>
+                                    <h3 class="vacancy__subtitle">Responsibilities:</h3>
+
+                                    <ul class="vacancy__list vacancy__list_purple">
+                                        <li class="vacancy__list-item">
+                                            Ui lizing external and internal platforms to promote
+                                            open positions.
+                                        </li>
+                                        <li class="vacancy__list-item">
+                                            Conducting thorough candidate screening through both
+                                            telephone and face-to-face interviews.
+                                        </li>
+                                        <li class="vacancy__list-item">
+                                            Providing strategic consulting to management regarding
+                                            recruitment approaches.
+                                        </li>
+                                        <li class="vacancy__list-item">
+                                            Managing candidate scheduling and facilitating the final
+                                            selection process.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="vacancy__content mt-20">
+                                    <h3 class="vacancy__subtitle">Candidate / Profile Skills:</h3>
+
+                                    <ul class="vacancy__list vacancy__list_purple">
+                                        <li class="vacancy__list-item">
+                                            Previous experience of 12 months – 2 years (preferably
+                                            in Recruitment, but not mandatory).
+                                        </li>
+                                        <li class="vacancy__list-item">
+                                            Exceptional communication skills.
+                                        </li>
+                                        <li class="vacancy__list-item">
+                                            Proficiency in Advanced English.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <form
+                                class="contact__form"
+                                action="files/sendmail/sendmail.php"
+                                method="POST"
+                                data-popup-message="#form-message"
+                                data-dev>
+                                <div class="form__line">
+                                    <div>
+                                        <input
+                                            type="text"
+                                            id="name"
+                                            name="name"
+                                            data-error="Incorrect name"
+                                            data-required
+                                            placeholder="Name " />
+                                    </div>
+                                    <div>
+                                        <input
+                                            type="text"
+                                            id="surname"
+                                            name="surname"
+                                            data-error="Incorrect name"
+                                            data-required
+                                            placeholder="Surname " />
+                                    </div>
+                                </div>
+
+                                <div class="form__line">
+                                    <div>
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            data-required="email"
+                                            data-error="Incorrect email"
+                                            placeholder="Email " />
+                                    </div>
+                                    <div>
+                                        <input
+                                            type="text"
+                                            name="phone"
+                                            id="phone"
+                                            placeholder="Phone number" />
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <textarea
+                                        name="message"
+                                        id="message"
+                                        placeholder="Let us know how we can help"></textarea>
+                                </div>
+                                <div>
+                                    <span class="upload__subtitle">Attach relevant files:</span>
+                                </div>
+
+                                <div class="form__file">
+                                    <label for="file-upload" class="file-label">
+                                        <img src="@img/upload.svg" alt="upload" /> Upload file
+                                    </label>
+                                    <input
+                                        type="file"
+                                        id="file-upload"
+                                        name="attachment"
+                                        class="file-input" />
+                                    <span id="file-chosen" class="file-chosen">No file chosen</span>
+                                </div>
+                                <!-- custom script -->
+                                <script>
+                                    const fileInput = document.getElementById("file-upload");
+                                    const fileChosen = document.getElementById("file-chosen");
+
+                                    fileInput.addEventListener("change", () => {
+                                        if (fileInput.files.length > 0) {
+                                            fileChosen.textContent = fileInput.files[0].name;
+                                        } else {
+                                            fileChosen.textContent = "No file chosen";
+                                        }
+                                    });
+                                </script>
+                                <!--  -->
+
+                                <div class="form__checkbox">
+                                    <input type="checkbox" id="agree" name="agree" required />
+                                    <label for="agree">
+                                        I have read and agree with <span>Workpoint's</span>
+                                        <a href="policy.html">Privacy Policy</a> and
+                                        <a href="terms.html">Terms of Use!</a>
+                                    </label>
+                                </div>
+
+                                <button class="contact__btn btn" type="submit">
+                                    Send your request
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.htm',{})
+        </div>
+        <!-- @@include('html/_popup.htm',{})  -->
+        @@include('html/_js.htm',{})
+    </body>
+</html>
