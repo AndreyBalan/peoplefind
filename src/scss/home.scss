@@ -662,7 +662,10 @@
     width: 100%;
 
     input[type="checkbox"] {
-        display: none;
+        position: absolute;
+        opacity: 0;
+        left: toRem(810);
+        pointer-events: none;
     }
 
     label {
