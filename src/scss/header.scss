@@ -44,6 +44,7 @@
         position: relative;
     }
     // .menu__link
+    // .menu__link
     &__link {
         color: #00173a;
         font-size: toRem(16);
@@ -54,7 +55,7 @@
         gap: 6px;
         cursor: pointer;
         position: relative;
-        display: inline-block;
+
         .menu__text {
             position: relative;
             display: inline-block;
@@ -72,7 +73,9 @@
                 transition: transform 0.3s ease;
             }
         }
-        &::after {
+
+        /* стандартне підкреслення тільки для звичайних пунктів */
+        &:not(.dropdown)::after {
             content: "";
             position: absolute;
             left: 0;
@@ -84,18 +87,30 @@
             transform-origin: right;
             transition: transform 0.3s ease;
         }
+
         &.dropdown {
             display: flex;
             align-items: center;
             gap: toRem(10);
         }
 
-        &:hover::after,
-        &.active::after {
+        /* ховер + актив для звичайних пунктів */
+        &:not(.dropdown):hover::after,
+        &:not(.dropdown).active::after {
             transform: scaleX(1);
         }
 
-        &:not(.active):hover::after {
+        &:not(.dropdown):not(.active):hover::after {
+            transform-origin: left;
+        }
+
+        /* ховер + актив для dropdown – працює через .menu__text::after */
+        &.dropdown:hover .menu__text::after,
+        &.dropdown.active .menu__text::after {
+            transform: scaleX(1);
+        }
+
+        &.dropdown:not(.active):hover .menu__text::after {
             transform-origin: left;
         }
 
@@ -103,9 +118,6 @@
             flex-shrink: 0;
             transition: transform 0.3s ease;
         }
-        // &.dropdown:hover .arrow {
-        //     transform: rotate(180deg);
-        // }
     }
 
     .dropdown__menu {
@@ -161,6 +173,4 @@
     // .menu__icon
     &__icon {
     }
-}
-.icon-menu {
 }

@@ -1960,6 +1960,7 @@
 }
 .text-left {
     max-width: toRem(486);
+    line-height: toRem(24);
     @media (max-width: $tablet) {
         max-width: 100%;
     }
@@ -1967,6 +1968,7 @@
 .text-right {
     max-width: toRem(486);
     margin-left: toRem(200);
+    line-height: toRem(24);
     @media (max-width: $tablet) {
         margin-left: 0;
         max-width: toRem(421);
